@@ -100,7 +100,7 @@ export default function AdminInquiriesPage() {
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label htmlFor="admin-password" className="block text-sm font-semibold text-primary mb-2">
-                  비밀번호
+                  관리자 비밀번호
                 </label>
                 <input
                   type="password"
@@ -108,7 +108,7 @@ export default function AdminInquiriesPage() {
                   value={passwordInput}
                   onChange={(e) => setPasswordInput(e.target.value)}
                   required
-                  placeholder="관리자 비밀번호 입력 (itrs@2026)"
+                  placeholder="••••••••"
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent text-primary bg-background"
                 />
               </div>
