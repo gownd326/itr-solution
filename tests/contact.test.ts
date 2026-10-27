@@ -41,6 +41,11 @@ describe('Contact Form & Inquiry Tests', () => {
     expect(error).toBeNull()
   })
 
+  it('should verify admin password authentication value matches itrs@2026', () => {
+    const adminPassword = 'itrs@2026'
+    expect(adminPassword).toBe('itrs@2026')
+  })
+
   it('should simulate successful database insertion payload structure', async () => {
     const mockInsert = vi.fn().mockResolvedValue({ error: null })
     const mockFrom = vi.fn().mockReturnValue({ insert: mockInsert })

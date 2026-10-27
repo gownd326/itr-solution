@@ -1,6 +1,6 @@
 # ITR Solution — 개발 문서
 
-> 문서 버전 v5 · 완성도 100% · 마지막 수정 2026. 10. 27. 15시 6분 22초
+> 문서 버전 v6 · 완성도 100% · 마지막 수정 2026. 10. 27. 15시 10분 49초
 > 이 문서만 보고 AI(또는 개발자)가 개발해도 거의 같은 결과가 나오도록 작성되었습니다.
 
 ## 기본 정보
@@ -101,7 +101,7 @@
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-ADMIN_PASSWORD=your_admin_password_for_inquiries
+ADMIN_PASSWORD=itrs@2026
 ```
 
 ### 폴더 구조
@@ -148,7 +148,7 @@ ADMIN_PASSWORD=your_admin_password_for_inquiries
 | --- | --- | --- | --- | --- |
 | T-01 | 문의 폼 제출 | `/contact` 접속 | **Given** 문의 페이지에 접속해 있다.<br>**When** 필수 입력값(이름, 연락처, 이메일, 내용)을 입력하고 제출 버튼을 누른다.<br>**Then** 성공 메시지가 노출되고 Supabase `inquiries` 테이블에 데이터가 적재된다. | 데이터 정상 저장 및 완료 팝업 노출 |
 | T-02 | 문의 폼 유효성 검사 | `/contact` 접속 | **Given** 문의 페이지에 접속해 있다.<br>**When** 필수값을 비운 채 제출 버튼을 누른다.<br>**Then** 브라우저 유효성 검사 또는 에러 메시지가 뜬다. | 제출 차단 및 에러 안내 |
-| T-03 | 관리자 인증 및 조회 | 관리자 비밀번호 숙지 | **Given** `/admin/inquiries`에 접속한다.<br>**When** 설정된 관리자 비밀번호를 입력하여 인증한다.<br>**Then** DB에 저장된 문의 목록 테이블이 정상 렌더링된다. | 문의 내역 리스트 출력 |
+| T-03 | 관리자 인증 및 조회 | 관리자 비밀번호 숙지 (`itrs@2026`) | **Given** `/admin/inquiries`에 접속한다.<br>**When** 설정된 관리자 비밀번호(`itrs@2026`)를 입력하여 인증한다.<br>**Then** DB에 저장된 문의 목록 테이블이 정상 렌더링된다. | 문의 내역 리스트 출력 |
 | T-04 | 스모크 테스트 | 배포 완료 상태 | **Given** 사이트가 배포되어 있다.<br>**When** `/`, `/services`, `/contact` 경로로 접속한다.<br>**Then** HTTP 200 상태 코드로 페이지가 렌더링된다. | 에러 없는 페이지 로딩 |
 
 ## 11. 가정과 기본값 (AI가 대신 정한 것)
@@ -169,6 +169,7 @@ ADMIN_PASSWORD=your_admin_password_for_inquiries
 
 | 버전 | 일시 | 변경 내용 |
 | --- | --- | --- |
+| v6 | 2026. 10. 27. 15시 10분 18초 | 관리자 비밀번호를 'itrs@2026'으로 변경 |
 | v5 | 2026. 10. 27. 15시 5분 59초 | 기존 웹사이트의 텍스트 내용을 변경하지 않고, 이미지만 트렌드에 맞게 개편하도록 제약 사항을 문서에 반영함. |
 | v4 | 2026. 10. 27. 15시 2분 13초 | 기존 솔루션 및 서비스 범위 내에서 내용을 엄격히 유지하도록 프로젝트 문서 검토 및 확정 |
 | v3 | 2026. 10. 27. 14시 36분 26초 | 최종 감수: 최종 감수 완료: 모든 섹션의 일관성을 맞추고, 환경변수 및 상세 기술 구조와 테스트 시나리오를 구체화함 |

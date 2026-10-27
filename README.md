@@ -19,12 +19,12 @@
    ```bash
    npm install
    ```
-3. 환경 변수 설정 파일을 생성합니다. 프로젝트 루트에 `.env.local` 파일을 만들고 아래 내용을 입력합니다 (Supabase 및 관리자 비밀번호 설정):
+3. 환경 변수 설정 파일을 생성합니다. 프로젝트 루트에 `.env.local` 파일을 만들고 아래 내용을 입력합니다 (Supabase 및 관리자 비밀번호 설정, 관리자 비밀번호 기본값 `itrs@2026`):
    ```env
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
    SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
-   ADMIN_PASSWORD=your_admin_password_for_inquiries
+   ADMIN_PASSWORD=itrs@2026
    ```
 4. 개발 서버를 실행합니다:
    ```bash
@@ -40,7 +40,7 @@
 - **회사 소개 (`/about`)**: CEO 인사말, 연혁 타임라인, 오시는 길 안내
 - **솔루션/서비스 (`/services`)**: 제공하는 IT 솔루션 상세 설명 카드 목록
 - **문의하기 (`/contact`)**: 잠재 고객의 상담 및 견적 문의 접수 폼 (Supabase 연동)
-- **관리자 문의함 (`/admin/inquiries`)**: 설정된 관리자 비밀번호로 로그인하여 접수된 문의 내역 확인 및 상태 변경
+- **관리자 문의함 (`/admin/inquiries`)**: 설정된 관리자 비밀번호(`itrs@2026`)로 로그인하여 접수된 문의 내역 확인 및 상태 변경
 
 ---
 
