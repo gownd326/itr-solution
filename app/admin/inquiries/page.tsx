@@ -29,7 +29,7 @@ export default function AdminInquiriesPage() {
 
     const targetPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-    if (passwordInput !== '' && passwordInput === targetPassword) {
+    if (passwordInput != '' && passwordInput === targetPassword) {
       setIsAuthenticated(true);
       fetchInquiries();
     } else {
