@@ -27,9 +27,9 @@ export default function AdminInquiriesPage() {
     e.preventDefault();
     setAuthError('');
 
-    const targetPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'itrs@2026';
+    const targetPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-    if (passwordInput === targetPassword || passwordInput === 'itrs@2026') {
+    if (passwordInput !== '' && passwordInput === targetPassword) {
       setIsAuthenticated(true);
       fetchInquiries();
     } else {
@@ -108,7 +108,7 @@ export default function AdminInquiriesPage() {
                   value={passwordInput}
                   onChange={(e) => setPasswordInput(e.target.value)}
                   required
-                  placeholder="••••••••"
+                  placeholder="관리자 비밀번호"
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-accent text-primary bg-background"
                 />
               </div>
